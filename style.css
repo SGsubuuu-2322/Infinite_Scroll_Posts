@@ -42,4 +42,43 @@ h1 {
   padding: 20px;
   margin: 40px 0;
   display: flex;
+  position: relative;
 }
+
+.post .post-title {
+  margin: 0;
+}
+
+.post .post-body {
+  margin: 15px 0 0;
+  line-height: 1.4;
+}
+
+.post .post-info {
+  margin-left: 20px;
+}
+
+.post .number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  height: 40px;
+  width: 40px;
+  color: #296ca8;
+  background-color: #fff;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 10px;
+}
+
+.loader {
+  /* opacity: 0; */
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+  transition: opacity 0.4s ease-in;
+}
+
