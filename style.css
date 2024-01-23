@@ -75,7 +75,7 @@ h1 {
 }
 
 .loader {
-  /* opacity: 0; */
+  opacity: 0;
   position: fixed;
   bottom: 50px;
   display: flex;
@@ -92,4 +92,23 @@ h1 {
   background-color: #fff;
   border-radius: 50%;
   margin: 5px;
+  animation: bounce 0.4s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.circle:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
