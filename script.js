@@ -2,7 +2,7 @@ const post_container = document.getElementById("posts-container");
 const filter = document.getElementById("filter");
 const loader = document.getElementById("loader");
 
-let limit = 3;
+let limit = 5;
 let page = 1;
 
 async function getPosts() {
@@ -35,4 +35,16 @@ async function showPosts() {
   });
 }
 
+function showLoading() {
+  loader.style.opacity = 1;
+}
+
 showPosts();
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+  if (scrollTop + clientHeight >= scrollHeight - 1) {
+    showLoading();
+  }
+});
