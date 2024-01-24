@@ -36,7 +36,15 @@ async function showPosts() {
 }
 
 function showLoading() {
-  loader.style.opacity = 1;
+  loader.classList.add("show");
+  setTimeout(() => {
+    loader.classList.remove("show");
+
+    setTimeout(() => {
+      page++;
+      showPosts();
+    }, 300);
+  }, 1000);
 }
 
 showPosts();
